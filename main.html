@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Rito</title>
+    <link rel="stylesheet" href="styles/style-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="script/src.js"></script>
+</head>
+<body>
+    <div class="cont-navbar" id="start">
+        <div class="navbar">
+            <img src="/photos/logo/logo-rito.png" alt="" onclick="" style="margin-left:20px;margin-top:5px;user-select:none;">
+            <div class="buttons">
+                <button class="lody btn" id="lody" onclick="scrollFunction('article')">Lody</button>
+                <button class="prop btn" id="prop" onclick="scrollFunction('section')" style="width: 10vw;">Formularz</button>
+                <button class="about btn" id="about" onclick="showPopUp()">Kontakt</button>
+            </div>
+            
+        </div>
+        <div class="cream">
+            <div class="cream-1">
+            </div>
+            <div class="cream-dots">
+                <div class="dot-1"></div>
+                <div class="dot-2"></div>
+            </div>
+            <div class="cream-2">
+            </div>
+        </div>
+    </div>
+    <div class="pop-up-about" id="popup">
+        <div class="logo-button" style="border-bottom: 1px solid black; display: flex; justify-content: space-between; padding-bottom: 5px; margin-bottom: 20px;">
+            <p style="font-size: 20px;">Kontakt</p>
+            <a href="" onclick="hidePopUp()" style="font-size: 20px;"><i class="fa-regular fa-circle-xmark"></i></a>
+        </div><br>
+        <p >Numer kontaktowy:  <h style="text-decoration:underline;">+48 123-456-789</h></p><br><br>
+        <p>Adres email:  <h style="text-decoration:underline;">lody-rito@gmail.com</h></p>
+    </div>
+    
+    <main>
+        <div class="text">
+            <p class="firma">Firma Rito</p>
+            <p class="desc">
+                Nasza firma zajmuje się produkcją lodów od ponad 50 lat. Nasze lody są robione w 100% z naturalnego krowiego mleka.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, totam. Quas quod beatae, libero sed nihil eveniet ducimus enim reiciendis officiis officia nulla repellat consectetur magnam maiores, alias repellendus. Molestias.
+            </p>
+        </div>
+        
+    </main>
+    <article id="article">
+        <p class="text-2" style="font-size: 20px;">Oto lista naszych przepysznych lodów (najedź na mnie)</p>    
+        <div class="container" id="ice_cream">
+            <div class="items">
+                <div class="img_wrap" onmouseover="showText('img_trus')" onmouseout="hideText('img_trus')"><img class="item" src="/photos/items/strawberry-icecream.png" width="250" height="250" alt=""><p class="img_text" id="img_trus">Lody Truskawkowe | 11zł/250g</p></div>
+                <div class="img_wrap" onmouseover="showText('img_czek')" onmouseout="hideText('img_czek')"><img class="item" src="/photos/items/chocolate-icecream.png" width="250" height="250" alt=""><p class="img_text" id="img_czek">Lody czekoladowe | 13zł/250g</p></div>
+                <div class="img_wrap" onmouseover="showText('img_bor')" onmouseout="hideText('img_bor')"><img class="item" src="/photos/items/blueberry-icecream.png" width="250" height="250" alt=""><p class="img_text" id="img_bor">Lody borówkowe | 15zł/250g</p></div>
+                <div class="img_wrap" onmouseover="showText('img_wan')" onmouseout="hideText('img_wan')"><img class="item" src="/photos/items/wanilla-icecream.png" width="250" height="250" alt=""><p class="img_text" id="img_wan">Lody waniliowe | 10zł/250g</p></div>
+
+            </div>
+        </div>
+    </article>
+        
+    <section id="section">
+        <div class="container-forms">
+            <p style="font-size: 1.4rem; font-weight: 450; margin-bottom: 50px;">Poniżej możesz zaproponować nam twój smak lodów oraz ich nazwę 😉🍨</p>
+            <form action="" onsubmit="return checkForm()" name="myForm" style="font-size: 1.2rem;">
+                <label for="fname">Nazwa lodów</label>
+                <input type="text" id="fname" name="fname">
+                <label for="smak">Smak lodów</label>
+                <input type="text" id="smak" name="smak">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <input type="submit" value="Wyslij!" >
+            </form>
+        </div>
+    </section>
+    <button class="sticky-up" onclick="scrollFunction('start')"><i class="fa-solid fa-arrow-up fa-xl"></i></button>
+
+    <footer id="footer">
+        <a href="https://github.com/SharixVent"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.google.pl/" style="font-size: 20px;margin-top: 15px; opacity: 40%;">Powered by Google LLC</a>
+        <a href="https://x.com/Google"><i class="fa-brands fa-square-x-twitter fa-lg"></i></a>
+    </footer>
+</body>
+</html>
